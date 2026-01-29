@@ -1,0 +1,9 @@
+region              = "us-east-1"
+environment         = "prod"
+vpc_cidr             = "10.30.0.0/16"
+public_subnet_cidr   = "10.30.1.0/24"
+private_subnet_cidr  = "10.30.2.0/24"
+age_days             = 365                      # delete snapshots older than 1 year
+cron_schedule        = "cron(0 2 * * ? *)"      # run daily at 2 AM UTC
+memory_size          = 512                      # allocate more memory for production
+timeout              = 90                       # allow 90 seconds for heavier snapshot loads
